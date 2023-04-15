@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/openwisp/django-swappable-models
-  summary: The unofficial Django swappable models API.
+  summary: The unofficial Django swappable models API
   license: MIT
   license_file: LICENSE
 
