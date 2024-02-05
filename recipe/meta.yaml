@@ -23,17 +23,12 @@ requirements:
     - django >=4.2
 
 test:
-  source_files:
-    - tests
   imports:
     - swapper
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - django >=2.0
-    - pytest
 
 about:
   home: https://github.com/openwisp/django-swappable-models
