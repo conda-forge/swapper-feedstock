@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/swapper-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/swapper-{{ version }}.tar.gz
   sha256: 9e083af114ee0593241a7b877e3e0e7d3a580454f5d59016c667a5563306f8fe
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-scm
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -34,6 +34,7 @@ test:
     - django >=2.0
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/openwisp/django-swappable-models
