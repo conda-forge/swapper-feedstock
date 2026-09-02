@@ -1,18 +1,18 @@
 {% set name = "swapper" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/swapper-{{ version }}.tar.gz
-  sha256: 9e083af114ee0593241a7b877e3e0e7d3a580454f5d59016c667a5563306f8fe
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/swapper-{{ version }}.tar.gz
+  sha256: 405f934265aa0c8d8b8e6b1be584875d1a3b7de6b1cd6f47367a4dbdc028609a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
