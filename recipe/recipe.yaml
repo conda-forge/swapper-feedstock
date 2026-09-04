@@ -25,6 +25,8 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
+    # Fails import test if not included
+    - django >=4.2
 
 tests:
   - python:
@@ -39,7 +41,6 @@ tests:
         - tests
     requirements:
       run:
-        - django >=4.2
         - pytest
         - python ${{ python_min }}.*
     script:
