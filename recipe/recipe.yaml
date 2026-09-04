@@ -42,7 +42,7 @@ tests:
         - django >=2.0
         - pip
         - pytest
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - pytest -vvv --capture=tee-sys tests
 
