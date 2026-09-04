@@ -39,8 +39,7 @@ tests:
         - tests
     requirements:
       run:
-        - django >=2.0
-        - pip
+        - django >=4.2
         - pytest
         - python ${{ python_min }}.*
     script:
